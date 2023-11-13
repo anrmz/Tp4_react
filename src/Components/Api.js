@@ -6,7 +6,7 @@ function Api() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10`)
+    axios.get(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=15`)
       .then(res => setTodos(res.data))
       .catch(error => console.error(error));
   }, [page]);
